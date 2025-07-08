@@ -1,12 +1,80 @@
-# React + Vite
+# 🧪 QA Lab Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend application for the QA Lab project—a hands-on practice platform designed to simulate real-world software testing and automation scenarios. It connects to a Spring Boot backend via RESTful web services and is built using a modern React-based stack.
 
-Currently, two official plugins are available:
+## 🛠️ Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| Layer      | Technology                                                                                                                              |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Frontend   | [React](https://react.dev/) + [Vite](https://vitejs.dev/)                                                                               |
+| Styling    | [Tailwind CSS](https://tailwindcss.com/) _(planned)_                                                                                    |
+| Routing    | [React Router](https://reactrouter.com/)                                                                                                |
+| API Calls  | [Axios](https://axios-http.com/)                                                                                                        |
+| State Mgmt | [React Query](https://tanstack.com/query) _(planned)_                                                                                   |
+| Testing    | [Vitest](https://vitest.dev/), [React Testing Library](https://testing-library.com/), [Playwright](https://playwright.dev/) _(planned)_ |
 
-## Expanding the ESLint configuration
+## 📁 Folder Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+src/
+├── api/ # Axios config + shared API logic
+├── features/ # Feature-first organization
+│ └── bugReports/ # Bug report domain (components, pages, API, types, tests)
+├── hooks/ # Reusable custom hooks
+├── routes/ # Centralized routing config
+├── styles/ # Tailwind/global styles
+├── App.jsx
+├── main.jsx
+└── setupTests.js # Vitest/RTL setup
+
+## 🧩 Features (WIP)
+
+- [x] Project scaffolded with Vite + React
+- [x] Testing environment with Vitest + RTL
+- [ ] Bug report listing page (mocked, then API-backed)
+- [ ] Create/edit/delete bug reports
+- [ ] Input validation and error handling
+- [ ] Testing: unit, integration, and E2E
+
+## ▶️ Getting Started
+
+### Install Dependencies
+
+```bash
+npm install
+
+```
+
+### Run the Dev Server
+
+```bash
+
+npm run dev
+
+```
+
+### Run Tests
+
+```bash
+npx vitest
+
+```
+
+🔗 Backend
+This frontend connects to a Spring Boot REST API. Make sure the backend server is running and reachable. API base URL will be configured soon.
+
+📌 Learning Goals
+This project is designed to:
+
+Learn modern frontend practices step by step
+
+Connect to real backend APIs
+
+Practice various testing techniques in frontend apps
+
+Build confidence in modern React development
+
+🧠 Contributing & Versioning
+Versioning follows development milestones. Commit often and meaningfully, especially after functional or structural changes.
+
+📄 License
+MIT License
